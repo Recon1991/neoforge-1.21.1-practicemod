@@ -2,7 +2,6 @@ package net.reconhalcyon.practicemod.item;
 
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
@@ -18,10 +17,10 @@ public class ModCreativeModeTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, PracticeMod.MOD_ID);
 
     public static final Supplier<CreativeModeTab> PREVIEW_ITEMS_TAB = CREATIVE_MODE_TAB.register("preview_items_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.MORPHITEINGOT.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.MORPHITE_INGOT.get()))
                     .title(Component.translatable("creativetab.recontutmod.preview_items"))
                     .displayItems((itemDisplayParameters, output) -> {
-                        output.accept(ModItems.MORPHITEINGOT);
+                        output.accept(ModItems.MORPHITE_INGOT);
                         output.accept(ModItems.RAW_MORPHITE);
                     }).build());
 
@@ -32,6 +31,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.MORPHITE_BLOCK);
                         output.accept(ModBlocks.MORPHITE_ORE);
+                        output.accept(ModBlocks.DEEPSLATE_MORPHITE_ORE);
                     }).build());
 
     public static void register(IEventBus eventBus) {

@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "morphite_ingot",
+  "ingredient": {
+    "item": "recontutmod:raw_morphite"
+  },
+  "result": {
+    "count": 1,
+    "id": "recontutmod:morphite_ingot"
+  }
+}

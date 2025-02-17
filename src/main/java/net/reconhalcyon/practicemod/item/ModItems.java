@@ -9,7 +9,7 @@ import net.reconhalcyon.practicemod.PracticeMod;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(PracticeMod.MOD_ID);
 
-    public static final DeferredItem<Item> MORPHITEINGOT = ITEMS.register("morphiteingot",
+    public static final DeferredItem<Item> MORPHITE_INGOT = ITEMS.register("morphite_ingot",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> RAW_MORPHITE = ITEMS.register("raw_morphite",
             () -> new Item(new Item.Properties()));

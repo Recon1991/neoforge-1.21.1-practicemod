@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.25,
+  "group": "raw_morphite",
+  "ingredient": {
+    "item": "recontutmod:morphite_ore"
+  },
+  "result": {
+    "id": "recontutmod:raw_morphite"
+  }
+}

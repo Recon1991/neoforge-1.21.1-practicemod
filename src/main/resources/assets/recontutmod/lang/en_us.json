@@ -1,9 +1,10 @@
 {
-  "item.recontutmod.morphiteingot": "Morphite Ingot",
+  "item.recontutmod.morphite_ingot": "Morphite Ingot",
   "item.recontutmod.raw_morphite": "Raw Morphite",
 
   "block.recontutmod.morphite_block": "Block of Morphite",
   "block.recontutmod.morphite_ore": "Morphite Ore",
+  "block.recontutmod.deepslate_morphite_ore": "Deepslate Morphite Ore",
 
   "creativetab.recontutmod.preview_items": "Preview Items",
   "creativetab.recontutmod.preview_blocks": "Preview Blocks"
