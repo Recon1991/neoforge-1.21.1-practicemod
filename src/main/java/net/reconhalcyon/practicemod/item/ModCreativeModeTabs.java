@@ -22,6 +22,7 @@ public class ModCreativeModeTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.MORPHITE_INGOT);
                         output.accept(ModItems.RAW_MORPHITE);
+                        output.accept(ModItems.MORPHITE_CHISEL);
                     }).build());
 
     public static final Supplier<CreativeModeTab> PREVIEW_BLOCK_TAB = CREATIVE_MODE_TAB.register("preview_blocks_tab",
