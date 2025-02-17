@@ -1,5 +1,7 @@
 package net.reconhalcyon.practicemod;
 
+import net.reconhalcyon.practicemod.block.ModBlocks;
+import net.reconhalcyon.practicemod.item.ModCreativeModeTabs;
 import net.reconhalcyon.practicemod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -52,7 +54,11 @@ public class PracticeMod {
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
+
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
@@ -71,6 +77,11 @@ public class PracticeMod {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.MORPHITEINGOT);
             event.accept(ModItems.RAW_MORPHITE);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.MORPHITE_BLOCK);
+            event.accept(ModBlocks.MORPHITE_ORE);
         }
     }
     // You can use SubscribeEvent and let the Event Bus discover methods to call
