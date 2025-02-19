@@ -41,7 +41,7 @@ public class ChiselItem extends Item {
                 context.getItemInHand().hurtAndBreak(1, ((ServerLevel) level), context.getPlayer(),
                         item -> context.getPlayer().onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
 
-                level.playSound(null, context.getClickedPos(), SoundEvents.BONE_BLOCK_BREAK, SoundSource.BLOCKS);
+                level.playSound(null, context.getClickedPos(), SoundEvents.CAT_BEG_FOR_FOOD, SoundSource.BLOCKS);
             }
         }
 

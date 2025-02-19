@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "recontutmod:block/morphite_magic_block"
+  }
+}

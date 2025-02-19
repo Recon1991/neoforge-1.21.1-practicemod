@@ -1,6 +1,7 @@
 package net.reconhalcyon.practicemod.block;
 
 import net.reconhalcyon.practicemod.PracticeMod;
+import net.reconhalcyon.practicemod.block.custom.MorphiteMagicBlock;
 import net.reconhalcyon.practicemod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -29,6 +30,9 @@ public class ModBlocks {
     public static final DeferredBlock<Block> DEEPSLATE_MORPHITE_ORE = registerBlock("deepslate_morphite_ore",
             () -> new DropExperienceBlock(UniformInt.of(3, 6),
                     BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
+
+    public static final DeferredBlock<Block> MORPHITE_MAGIC_BLOCK = registerBlock("morphite_magic_block",
+            () -> new MorphiteMagicBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

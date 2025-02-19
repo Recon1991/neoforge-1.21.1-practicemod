@@ -1,6 +1,7 @@
 package net.reconhalcyon.practicemod.item;
 
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.PickaxeItem;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -17,6 +18,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> MORPHITE_CHISEL = ITEMS.register("morphite_chisel",
             () -> new ChiselItem(new Item.Properties().durability(1024)));
+
+    public static final DeferredItem<Item> POKE_BOWL = ITEMS.register("poke_bowl",
+            () -> new Item(new Item.Properties().food(ModFoodProperties.POKE_BOWL)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
