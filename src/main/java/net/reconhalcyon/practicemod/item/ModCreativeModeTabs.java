@@ -24,6 +24,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RAW_MORPHITE);
                         output.accept(ModItems.MORPHITE_CHISEL);
                         output.accept(ModItems.POKE_BOWL);
+                        output.accept(ModItems.HOT_SAND);
+                        output.accept(ModItems.HOT_STONE);
                     }).build());
 
     public static final Supplier<CreativeModeTab> PREVIEW_BLOCK_TAB = CREATIVE_MODE_TAB.register("preview_blocks_tab",
