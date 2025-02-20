@@ -7,6 +7,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.reconhalcyon.practicemod.PracticeMod;
 import net.reconhalcyon.practicemod.item.custom.ChiselItem;
+import net.reconhalcyon.practicemod.item.custom.FuelItem;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(PracticeMod.MOD_ID);
@@ -23,7 +24,9 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoodProperties.POKE_BOWL)));
 
     public static final DeferredItem<Item> HOT_STONE = ITEMS.register("hot_stone",
-            )
+            () -> new FuelItem(new Item.Properties(), 800));
+    public static final DeferredItem<Item> HOT_SAND = ITEMS.register("hot_sand",
+            () -> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
