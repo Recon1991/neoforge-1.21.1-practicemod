@@ -22,6 +22,9 @@ public class ModItems {
     public static final DeferredItem<Item> POKE_BOWL = ITEMS.register("poke_bowl",
             () -> new Item(new Item.Properties().food(ModFoodProperties.POKE_BOWL)));
 
+    public static final DeferredItem<Item> HOT_STONE = ITEMS.register("hot_stone",
+            )
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
