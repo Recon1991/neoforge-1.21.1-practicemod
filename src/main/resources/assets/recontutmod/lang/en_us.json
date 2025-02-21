@@ -13,6 +13,13 @@
   "block.recontutmod.morphite_magic_block": "Magical Morphite",
 
   "creativetab.recontutmod.preview_items": "Preview Items",
-  "creativetab.recontutmod.preview_blocks": "Preview Blocks"
+  "creativetab.recontutmod.preview_blocks": "Preview Blocks",
+
+  "tooltip.recontutmod.morphite_magic_block.tooltip": "Strange Alchemical Device, known for altering §9Morphite§r",
+
+  "tooltip.recontutmod.morphite_chisel.shift_down": "The Chisel will turn blocks into bricks",
+  "tooltip.recontutmod.morphite_chisel": "Press §eShift§r for more Info",
+
+  "tooltip.recontutmod.poke_bowl.tooltip": "Ahi Tuna Poke Bowl"
 
 }

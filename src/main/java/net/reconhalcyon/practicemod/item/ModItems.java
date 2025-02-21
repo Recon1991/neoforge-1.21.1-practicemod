@@ -1,13 +1,18 @@
 package net.reconhalcyon.practicemod.item;
 
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.PickaxeItem;
+import net.minecraft.world.item.TooltipFlag;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.reconhalcyon.practicemod.PracticeMod;
 import net.reconhalcyon.practicemod.item.custom.ChiselItem;
 import net.reconhalcyon.practicemod.item.custom.FuelItem;
+
+import java.util.List;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(PracticeMod.MOD_ID);
@@ -21,7 +26,13 @@ public class ModItems {
             () -> new ChiselItem(new Item.Properties().durability(1024)));
 
     public static final DeferredItem<Item> POKE_BOWL = ITEMS.register("poke_bowl",
-            () -> new Item(new Item.Properties().food(ModFoodProperties.POKE_BOWL)));
+            () -> new Item(new Item.Properties().food(ModFoodProperties.POKE_BOWL)){
+                @Override
+                public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                    tooltipComponents.add(Component.translatable("tooltip.recontutmod.poke_bowl.tooltip"));
+                    super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+                }
+            });
 
     public static final DeferredItem<Item> HOT_STONE = ITEMS.register("hot_stone",
             () -> new FuelItem(new Item.Properties(), 800));
