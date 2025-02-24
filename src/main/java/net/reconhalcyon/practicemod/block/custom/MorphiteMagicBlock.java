@@ -18,6 +18,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.reconhalcyon.practicemod.block.ModBlocks;
 import net.reconhalcyon.practicemod.item.ModItems;
+import net.reconhalcyon.practicemod.util.ModTags;
 
 import java.util.List;
 
@@ -36,7 +37,7 @@ public class MorphiteMagicBlock extends Block {
     @Override
     public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity) {
         if(entity instanceof ItemEntity itemEntity) {
-            if(itemEntity.getItem().getItem() == ModItems.RAW_MORPHITE.get()) {
+            if(isValidItem(itemEntity.getItem())) {
                 itemEntity.setItem(new ItemStack(Items.DIAMOND, itemEntity.getItem().getCount()));
             }
             if(itemEntity.getItem().getItem() == ModBlocks.MORPHITE_BLOCK.asItem()) {
@@ -45,6 +46,10 @@ public class MorphiteMagicBlock extends Block {
         }
 
         super.stepOn(level, pos, state, entity);
+    }
+
+    public boolean isValidItem(ItemStack item) {
+        return item.is(ModTags.Items.TRANSFORMABLE_ITEMS);
     }
 
     @Override
